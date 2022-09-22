@@ -32,30 +32,65 @@ class SinglyLinkedList {
     listLength() {
         // Returns the length of the list
         // Implement in O(n) and in O(1) time complexity
+        let curr = this.head;
+        let counter = 1;
 
+        while (curr.next) {
+            curr = curr.next
+            counter++;
+        }
+
+        return counter;
         // Your code here
     }
 
     sumOfNodes() {
         // Returns the sum of the values of all the nodes
+        let curr = this.head;
+        let sum = this.head.value;
 
-        // Your code here
+        while (curr.next) {
+            curr = curr.next
+            sum += curr.value;
+        }
+
+        return sum;
 
         // Write your hypothesis on the time complexity of this method here
     }
 
     averageValue() {
         // Returns the average value of all the nodes
+        let curr = this.head;
+        let sum = this.head.value;
+        let counter = 1;
 
-        // Your code here
+        while (curr.next) {
+            curr = curr.next
+            sum += curr.value;
+            counter++;
+        }
+
+        return sum / counter;
 
         // Write your hypothesis on the time complexity of this method here
     }
 
     findNthNode(n) {
         // Returns the node at the nth index from the head
+        let curr = this.head;
+        let counter = 1;
+        let res;
 
-        // Your code here
+        while (curr.next) {
+            curr = curr.next
+            counter++;
+            if (counter === n) {
+                res = curr.value;
+            }
+        }
+
+        return res;
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -63,7 +98,7 @@ class SinglyLinkedList {
     findMid() {
         // Returns the middle node
         // Implement this as a singly linked list then as a doubly linked list
-            // How do the implementation for singly and doubly vary if at all?
+        // How do the implementation for singly and doubly vary if at all?
 
         // Your code here
 
@@ -75,7 +110,7 @@ class SinglyLinkedList {
         // Returns a new reversed version of the linked list
         // Try implementing it by returning a new linked list then returning
         // the original linked list reversed in place
-            // Does the time complexity change? How about space complexity?
+        // Does the time complexity change? How about space complexity?
 
         // Your code here
 
@@ -125,7 +160,7 @@ class DoublyLinkedList {
     findMid() {
         // Returns the middle node
         // Implement this as a singly linked list then as a doubly linked list
-            // How do the implementation for singly and doubly vary if at all?
+        // How do the implementation for singly and doubly vary if at all?
 
         // Your code here
 
